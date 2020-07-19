@@ -34,7 +34,7 @@ struct ContentView: View {
                 .background(Color(showAnimation ? "card4" :"card3"))
                 .cornerRadius(20)
                 .shadow(radius: 20)
-                .offset(x:0, y: showAnimation ? -200 :-20)
+                .offset(x:0, y: showAnimation ? -180 :-20)
                 .scaleEffect(0.95)
                 .rotationEffect(.degrees(showAnimation ? 0 : 5))
                 .rotation3DEffect(.degrees(showAnimation ? 0 : 5), axis: (x:10.0, y: 0, z:0))
@@ -49,8 +49,6 @@ struct ContentView: View {
             .blur(radius: showAnimation ? 20 : 0)
             .animation(.default)
         }
-        
-        
     }
 }
 
