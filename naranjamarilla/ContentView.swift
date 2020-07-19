@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State var showAnimation = false
+    @State var viewState = CGSize.zero
     
     var body: some View {
         ZStack {
@@ -24,6 +25,7 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x:0, y: showAnimation ? -360 : -40)
+                .offset(x: self.viewState.width, y: self.viewState.height)
                 .scaleEffect(0.90)
                 .rotationEffect(.degrees(showAnimation ? 0 : 10))
                 .rotation3DEffect(.degrees(showAnimation ? 5 : 0), axis: (x:10.0, y: 0, z:0))
@@ -35,6 +37,7 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x:0, y: showAnimation ? -180 :-20)
+                .offset(x: self.viewState.width, y: self.viewState.height)
                 .scaleEffect(0.95)
                 .rotationEffect(.degrees(showAnimation ? 0 : 5))
                 .rotation3DEffect(.degrees(showAnimation ? 0 : 5), axis: (x:10.0, y: 0, z:0))
@@ -42,9 +45,22 @@ struct ContentView: View {
                 .animation(.easeInOut(duration: 0.3))
             
             CardView()
+                .offset(x: self.viewState.width, y: self.viewState.height)
+                .animation(.spring(response: 0.3, dampingFraction: 0.6, blendDuration: 0))
                 .onTapGesture {
                     self.showAnimation.toggle()
                 }
+                .gesture(
+                    DragGesture()
+                        .onChanged{value in
+                            self.viewState = value.translation
+                            self.showAnimation = true
+                        }
+                        .onEnded { value in
+                            self.viewState = CGSize.zero
+                            self.showAnimation = false
+                        }
+                )
             BottomView()
             .blur(radius: showAnimation ? 20 : 0)
             .animation(.default)
