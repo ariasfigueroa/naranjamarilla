@@ -79,7 +79,6 @@ struct ContentView: View {
                         }
                 )
             
-            Text("\(bottomState.height)").offset(y: -300)
             
             BottomView()
                 .offset(y: showCard ? 360: 1000)
@@ -93,15 +92,21 @@ struct ContentView: View {
                         if self.showFull {
                             self.bottomState.height += -300
                         }
+                        
+                        if self.bottomState.height < -300{
+                            self.bottomState.height = -300
+                        }
                     }
                 .onEnded{value in
                     if self.bottomState.height > 50 {
                         self.showCard = false
                     }
-                    if (self.bottomState.height < -100 && !self.showFull) {
+                    
+                    if (self.bottomState.height < -100 && !self.showFull) || (self.showFull && self.bottomState.height < -200) {
                         self.bottomState.height = -300
                         self.showFull = true
-                    } else {
+                    }
+                    else {
                         self.bottomState = .zero
                         self.showFull = false
                     }
