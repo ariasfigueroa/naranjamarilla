@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		64C055C724D33A8B008389F1 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C055C624D33A8B008389F1 /* MenuView.swift */; };
+		64C055C924D39C64008389F1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C055C824D39C64008389F1 /* HomeView.swift */; };
 		64C857E424C3E08D00FD1F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C857E324C3E08D00FD1F47 /* AppDelegate.swift */; };
 		64C857E624C3E08D00FD1F47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C857E524C3E08D00FD1F47 /* SceneDelegate.swift */; };
 		64C857E824C3E08D00FD1F47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C857E724C3E08D00FD1F47 /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		64C055C624D33A8B008389F1 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		64C055C824D39C64008389F1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		64C857E024C3E08D00FD1F47 /* naranjamarilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = naranjamarilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C857E324C3E08D00FD1F47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64C857E524C3E08D00FD1F47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				64C857E524C3E08D00FD1F47 /* SceneDelegate.swift */,
 				64C857E724C3E08D00FD1F47 /* ContentView.swift */,
 				64C055C624D33A8B008389F1 /* MenuView.swift */,
+				64C055C824D39C64008389F1 /* HomeView.swift */,
 				64C857E924C3E09000FD1F47 /* Assets.xcassets */,
 				64C857EE24C3E09000FD1F47 /* LaunchScreen.storyboard */,
 				64C857F124C3E09000FD1F47 /* Info.plist */,
@@ -273,6 +276,7 @@
 				64C857E424C3E08D00FD1F47 /* AppDelegate.swift in Sources */,
 				64C055C724D33A8B008389F1 /* MenuView.swift in Sources */,
 				64C857E624C3E08D00FD1F47 /* SceneDelegate.swift in Sources */,
+				64C055C924D39C64008389F1 /* HomeView.swift in Sources */,
 				64C857E824C3E08D00FD1F47 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
