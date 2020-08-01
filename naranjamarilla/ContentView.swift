@@ -81,7 +81,7 @@ struct ContentView: View {
             
             
             BottomView()
-                .offset(y: showCard ? 360: 1000)
+                .offset(y: showCard ? 360: screen.height)
                 .offset(y: bottomState.height)
                 .blur(radius: showAnimation ? 20 : 0)
                 .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
